@@ -1,1 +1,23 @@
+#include <stdio.h>
+#include <malloc.h>
+
+int main() {
+    float *a;
+    int n;
+    float sum=0;
+    printf("vvedite kol-vo elementov \n");
+    scanf_s("%d",&n);
+    a = (float*) malloc(n*sizeof(float));
+    for(int i=0;i<n;i++){
+        scanf_s("%f",(a+i));
+        sum=sum + *(a+i);
+    }
+    for(int i=0;i<n;i++) {
+        printf("%5.2f ", *(a+i));
+    }
+        printf("\n%f",sum);
+    free(a);
+    return 0;
+    }
+
 
